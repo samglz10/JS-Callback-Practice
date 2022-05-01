@@ -1,13 +1,13 @@
 const inventory = newInventory()
 move(inventory).to(0, 0)
-
+/* meant to be removed and place in move.js in part 4
 
 const character = newImage('assets/green-character/static.gif')
 let direction = null;
 let x = 100;
 let y = 250;
 
-const moveCharacter = () => { 
+setInterval(function(){ 
     if(direction === 'west'){
         x = x - 1
     }
@@ -22,13 +22,12 @@ const moveCharacter = () => {
     }
     character.style.left = x + 'px'
     character.style.bottom = y + 'px'
-    
-}
+}, 1)
+                                  
+                                  
 
-setInterval(moveCharacter(), 1)                                    
-
-document.addEventListener('keydown', function(e){                
-    if(e.repeat) return;
+document.addEventListener('keydown', function(e){  
+    if (e.repeat) return;              
     if(e.key === 'ArrowLeft'){
         direction = 'west'
     }
@@ -42,6 +41,13 @@ document.addEventListener('keydown', function(e){
         direction = 'south'
     }
 })
+
+
+document.addEventListener('keyup', function(e){
+    direction = null
+})
+*/
+
 
 
 
