@@ -1,12 +1,12 @@
-function move(character) {
+const move = (character) => {
     character.style.position = 'fixed'
 
-    function moveToCoordinates(left, bottom) {
+    const moveToCoordinates = (left, bottom) => {
         character.style.left = left + 'px'
         character.style.bottom = bottom + 'px'
     }
 
-    function moveWithArrowKeys(left, bottom){
+    const moveWithArrowKeys = (left, bottom) => {
        
     }
 
@@ -16,7 +16,7 @@ function move(character) {
     }        
 }
 
-function moveWithArrowKeys(left, bottom){
+const moveWithArrowKeys = (left, bottom) => {
     let direction = null;
     let x = left;
     let y = bottom;
@@ -24,7 +24,7 @@ function moveWithArrowKeys(left, bottom){
     element.style.left = x + 'px'
     element.style.bottom = y + 'px'
     
-    function moveCharacter(){ 
+    const moveCharacter= () => { 
         if(direction === 'west'){
             x-=1
         }
@@ -41,9 +41,9 @@ function moveWithArrowKeys(left, bottom){
         element.style.bottom = y + 'px'
     }
     
-    setInterval(moveCharacter, 1)
+    setInterval(moveCharacter)
     
-    document.addEventListener('keydown', function(e){
+    document.addEventListener('keydown', e => {
         if(e.repeat) return;
     
         if(e.key === 'ArrowLeft'){
@@ -60,7 +60,7 @@ function moveWithArrowKeys(left, bottom){
         }
     })
     
-    document.addEventListener('keyup', function(e){
+    document.addEventListener('keyup', e => {
         direction = null
     })
 }

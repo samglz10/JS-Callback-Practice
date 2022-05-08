@@ -1,8 +1,9 @@
 const inventory = newInventory()
-move(inventory).to(0, 0)
-/* meant to be removed and place in move.js in part 4
+move(inventory).withArrowKeys(0, 0);
 
-const character = newImage('assets/green-character/static.gif')
+
+let character = newImage('assets/green-character/static.gif')
+character.style.position = "absolute"
 let direction = null;
 let x = 100;
 let y = 250;
@@ -16,17 +17,19 @@ setInterval(function(){
     }
     if(direction === 'east'){
         x = x + 1
+        console.log("east");
     }
     if(direction === 'south'){
         y = y - 1
     }
     character.style.left = x + 'px'
     character.style.bottom = y + 'px'
+    
 }, 1)
                                   
                                   
 
-document.addEventListener('keydown', function(e){  
+document.addEventListener('keydown', e =>{  
     if (e.repeat) return;              
     if(e.key === 'ArrowLeft'){
         direction = 'west'
@@ -46,7 +49,7 @@ document.addEventListener('keydown', function(e){
 document.addEventListener('keyup', function(e){
     direction = null
 })
-*/
+
 
 
 
