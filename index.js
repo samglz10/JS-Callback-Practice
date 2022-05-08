@@ -1,5 +1,5 @@
 const inventory = newInventory()
-move(inventory).withArrowKeys(0, 0);
+move(inventory).to(0, 0);
 
 
 let character = newImage('assets/green-character/static.gif')
@@ -8,19 +8,22 @@ let direction = null;
 let x = 100;
 let y = 250;
 
-setInterval(function(){ 
+setInterval( () => { 
     if(direction === 'west'){
         x = x - 1
+        character.src = 'JS-Callback-Practice\assets\green-character\west.gif'
     }
     if(direction === 'north'){
         y = y + 1
+        character.src = 'JS-Callback-Practice\assets\green-character\north.gif'
     }
     if(direction === 'east'){
         x = x + 1
-        console.log("east");
+        character.src = 'JS-Callback-Practice\assets\green-character\east.gif'
     }
     if(direction === 'south'){
         y = y - 1
+        character.src ='JS-Callback-Practice\assets\green-character\south.gif'
     }
     character.style.left = x + 'px'
     character.style.bottom = y + 'px'
@@ -46,7 +49,7 @@ document.addEventListener('keydown', e =>{
 })
 
 
-document.addEventListener('keyup', function(e){
+document.addEventListener('keyup', e => {
     direction = null
 })
 
