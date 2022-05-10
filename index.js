@@ -11,19 +11,19 @@ let y = 250;
 setInterval( () => { 
     if(direction === 'west'){
         x = x - 1
-        character.src = 'JS-Callback-Practice\assets\green-character\west.gif'
+        character.src = 'JS-Callback-Practice/assets/green-character/west.gif'
     }
     if(direction === 'north'){
         y = y + 1
-        character.src = 'JS-Callback-Practice\assets\green-character\north.gif'
+        character.src = 'JS-Callback-Practice/assets/green-character/north.gif'
     }
     if(direction === 'east'){
         x = x + 1
-        character.src = 'JS-Callback-Practice\assets\green-character\east.gif'
+        character.src = 'JS-Callback-Practice/assets/green-character/east.gif'
     }
     if(direction === 'south'){
         y = y - 1
-        character.src ='JS-Callback-Practice\assets\green-character\south.gif'
+        character.src ='JS-Callback-Practice/assets/green-character/south.gif'
     }
     character.style.left = x + 'px'
     character.style.bottom = y + 'px'

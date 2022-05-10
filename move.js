@@ -16,7 +16,7 @@ const move = (character) => {
     }        
 }
 
-const moveWithArrowKeys = (left, bottom) => {
+const moveWithArrowKeys = (left, bottom,) => {
     let direction = null;
     let x = left;
     let y = bottom;
